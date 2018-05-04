@@ -6,6 +6,17 @@
 </head>
 <body>
 
-<script src="app.hs"></script>
+<script src="app.js"></script>
+<script type="text/javascript">
+  function say(something) {
+    console.log(something);
+  }
+  function exec(func, arg){
+    func(arg);
+  }
+  exec(say, 'hello');
+  // pass in an (anonymous) function *expression*
+  exec((something) => {console.log(something)}, 'wow');
+</script>
 </body>
 </html>
