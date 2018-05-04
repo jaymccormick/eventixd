@@ -8,6 +8,13 @@
 
 <script src="app.js"></script>
 <script type="text/javascript">
+  // setTimeout
+  window.setTimeout((something)=>{console.log(something);},
+  3000,
+  'called back');
+
+  /**
+  // passing function expressions
   function say(something) {
     console.log(something);
   }
@@ -17,6 +24,7 @@
   exec(say, 'hello');
   // pass in an (anonymous) function *expression*
   exec((something) => {console.log(something)}, 'wow');
+  */
 </script>
 </body>
 </html>
