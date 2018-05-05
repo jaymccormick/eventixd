@@ -3,7 +3,7 @@ const addButton = document.querySelector('button.add-item');
 const removeButton = document.querySelector('button.remove-item');
 const ul = document.querySelector('ul');
 const liList = document.getElementsByTagName('li');
-const divList = document.getElementsByClassName('list');
+const divList = document.querySelector('.list');
 
 addButton.addEventListener('click', () => {
   const text = addInput.value;
@@ -18,10 +18,22 @@ removeButton.addEventListener('click', () => {
   ul.removeChild(lastLI);
 });
 
-divList[0].addEventListener('mouseover', (ev)=> {
+divList.addEventListener('mouseover', (ev) => {
   // event is an object w/ attributes and methods
   // use event.target to get element where event started
-  console.log(ev.target);
+  if (ev.target.tagName == 'LI'){
+    let currentLI = ev.target;
+    currentLI.textContent = currentLI.textContent.toUpperCase();
+  }
+});
+
+divList.addEventListener('mouseout', (ev) => {
+  // event is an object w/ attributes and methods
+  // use event.target to get element where event started
+  if (ev.target.tagName == 'LI'){
+    let currentLI = ev.target;
+    currentLI.textContent = currentLI.textContent.toLowerCase();
+  }
 });
 
 /** use event bubbling to move handler to parent div
