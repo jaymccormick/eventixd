@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Event Listening</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div class="list">
+  <p>Things that are green:</p>
+  <input type="text" class="description">
+  <button type="button" class="add-item">Add Item</button>
+  <button type="button" name="remove-item">Remove Item</button>
+  <ul>
+    <li>grapes</li>
+    <li>grass</li>
+    <li>leaves</li>
+  </ul>
+</div>
 <script src="app.js"></script>
-<script type="text/javascript">
+<!--script type="text/javascript">
   // setTimeout
   window.setTimeout((something)=>{console.log(something);},
   3000,
@@ -25,6 +36,6 @@
   // pass in an (anonymous) function *expression*
   exec((something) => {console.log(something)}, 'wow');
   */
-</script>
+</script-->
 </body>
 </html>
