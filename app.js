@@ -18,7 +18,11 @@ removeButton.addEventListener('click', () => {
 });
 
 for (let i = 0; i < liList.length; i++){
-  liList[i].addEventListener('mouseover', () => {
-    liList[i].style.textTransform = 'uppercase';
+  let currentLI = liList[i];
+  currentLI.addEventListener('mouseover', () => {
+    currentLI.textContent = currentLI.textContent.toUpperCase();
+  });
+  currentLI.addEventListener('mouseout', () => {
+    currentLI.textContent = currentLI.textContent.toLowerCase();
   });
 }
